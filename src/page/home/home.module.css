@@ -1,0 +1,80 @@
+.homeStyle {
+    display: flex;
+    flex-direction: column;
+    width: 1280px;
+    /*border: 1px solid red;*/
+}
+
+.firstSection {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: calc(100vh - 60px);
+    gap: 30px;
+    padding-left: 100px;
+    padding-bottom: 50px;
+
+    /* border: 1px solid red; */
+}
+
+.avater {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    animation: floatAnim 3s ease-in-out infinite;
+}
+/* 定义上下浮动关键帧 */
+@keyframes floatAnim {
+  0% {
+    transform: translateY(0); /* 原始位置 */
+  }
+  50% {
+    transform: translateY(-5px); /* 向上浮动 5px */
+  }
+  100% {
+    transform: translateY(0); /* 回到原位 */
+  }
+}
+
+.avater>img {
+    width: 100%;
+    border-radius: 50%;
+}
+
+
+
+.welcomeText {
+    font-size: 40px;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 100%;
+    color: var(--fontColor);
+
+    &>div {
+        text-align: start;
+    }
+}
+
+.blogStyle {
+    width: 100%;
+    /*border: 1px solid red;*/
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.blogStyleLeft {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+}
+.blogStyleRight {
+    flex:1;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}

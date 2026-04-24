@@ -1,0 +1,291 @@
+.detailsPage {
+    width: 1280px;
+    padding: 16px;
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+}
+
+.leftPane {
+    width: 300px;
+}
+
+.rightPane {
+    flex: 1;
+    min-width: 0;
+    text-align: left;
+}
+
+.articleHeader {
+    padding-bottom: 12px;
+}
+
+.articleMetaRow {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.categoryTag {
+    display: inline-flex;
+    align-items: center;
+    padding: 2px 10px;
+    border-radius: 999px;
+    background: rgba(100, 108, 255, 0.12);
+    color: #4f46e5;
+    font-weight: 700;
+    font-size: 12px;
+}
+
+.articleDate {
+    color: #6b7280;
+    font-size: 12px;
+}
+
+.articleTitle {
+    margin-top: 10px;
+    font-size: 22px;
+    font-weight: 800;
+    color: #0f172a;
+    line-height: 1.2;
+}
+
+.articleSummary {
+    margin-top: 10px;
+    color: #475569;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.articleBody {
+    padding: 0 25px 18px 25px;
+}
+
+.emptyState {
+    padding: 14px 0;
+    color: #64748b;
+    font-size: 14px;
+}
+
+.markdown {
+    color: #0f172a;
+    line-height: 1.75;
+    font-size: 15px;
+    text-align: left;
+}
+
+.markdown :global(h1),
+.markdown :global(h2),
+.markdown :global(h3) {
+    font-weight: 800;
+    line-height: 1.25;
+    margin: 18px 0 10px;
+}
+
+.markdown :global(h1) {
+    font-size: 22px;
+    margin-top: 0;
+}
+
+.markdown :global(h2) {
+    font-size: 18px;
+}
+
+.markdown :global(h3) {
+    font-size: 16px;
+}
+
+.markdown :global(p) {
+    margin: 10px 0;
+}
+
+.markdown :global(ul),
+.markdown :global(ol) {
+    padding-left: 20px;
+    margin: 10px 0;
+}
+
+.markdown :global(li) {
+    margin: 6px 0;
+}
+
+.markdown :global(a) {
+    color: #4f46e5;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.markdown :global(pre) {
+    background: #0b1220;
+    color: #e2e8f0;
+    padding: 14px 16px;
+    border-radius: 12px;
+    overflow: auto;
+    margin: 14px 0;
+}
+
+.markdown :global(code) {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    font-size: 13px;
+}
+
+.markdown :global(:not(pre) > code) {
+    background: rgba(15, 23, 42, 0.06);
+    padding: 2px 6px;
+    border-radius: 8px;
+}
+
+.markdown :global(table) {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 14px 0;
+    overflow: hidden;
+    border-radius: 12px;
+    border: 1px solid #e5e7eb;
+}
+
+.markdown :global(th),
+.markdown :global(td) {
+    padding: 10px 12px;
+    border-bottom: 1px solid #e5e7eb;
+    text-align: left;
+    font-size: 13px;
+}
+
+.markdown :global(th) {
+    background: #f8fafc;
+    font-weight: 700;
+}
+
+.actionsRow {
+    display: flex;
+    gap: 10px;
+    margin-top: 18px;
+    padding-top: 16px;
+    border-top: 1px solid #e5e7eb;
+}
+
+.commentSection {
+    margin-top: 18px;
+    padding-top: 16px;
+    border-top: 1px solid #e5e7eb;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.commentHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.commentTitle {
+    font-size: 14px;
+    font-weight: 800;
+    color: #0f172a;
+}
+
+.commentCount {
+    min-width: 26px;
+    height: 26px;
+    border-radius: 999px;
+    background: #f1f5f9;
+    color: #334155;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.commentComposer {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.commentTextarea {
+    width: 100%;
+    resize: vertical;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 10px 12px;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 160ms ease, box-shadow 160ms ease;
+}
+
+.commentTextarea:focus {
+    border-color: rgba(99, 102, 241, 0.65);
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.18);
+}
+
+.commentTextarea:disabled {
+    background: #f8fafc;
+    color: #94a3b8;
+}
+
+.commentSubmitRow {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.commentList {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.commentItem {
+    border: 1px solid #e5e7eb;
+    border-radius: 14px;
+    padding: 12px 12px;
+    background: #ffffff;
+}
+
+.commentMeta {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 10px;
+    margin-bottom: 8px;
+}
+
+.commentAuthor {
+    font-weight: 800;
+    font-size: 12px;
+    color: #0f172a;
+}
+
+.commentDate {
+    font-size: 12px;
+    color: #64748b;
+}
+
+.commentContent {
+    font-size: 14px;
+    color: #0f172a;
+    line-height: 1.6;
+    white-space: pre-wrap;
+}
+
+.commentEmpty {
+    color: #64748b;
+    font-size: 13px;
+    padding: 4px 2px;
+}
+
+@media (max-width: 980px) {
+    .detailsPage {
+        width: 100%;
+        flex-direction: column;
+        padding: 12px 16px;
+    }
+
+    .leftPane {
+        position: static;
+        width: 100%;
+        flex: initial;
+    }
+}

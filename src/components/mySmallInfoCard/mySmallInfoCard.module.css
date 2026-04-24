@@ -1,0 +1,89 @@
+.myCardStyle {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    padding: 30px 10px;
+    border: 1px solid rgba(255,127,0,0.5);
+
+}
+
+.flexLayoutColumn {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.infoPanel {
+    width: 100%;
+    padding: 0.75rem 0;
+}
+.infoTags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+.infoTag {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 0.3rem 0.75rem;
+    border-radius: 999px;
+    background: radial-gradient(circle at 0 0, rgba(129, 140, 248, 0.15), transparent),
+    radial-gradient(circle at 100% 100%, rgba(248, 250, 252, 0.9), #EEF2FF);
+    border: 1px solid rgba(148, 163, 184, 0.6);
+    box-shadow: 0 8px 18px rgba(15, 23, 42, 0.06);
+}
+.infoTagFull {
+    flex: 1 1 100%;
+}
+.infoTagLabel {
+    font-size: 0.75rem;
+    color: #64748B;
+}
+.infoTagValue {
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: #0F172A;
+}
+.flexLayoutRow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+}
+.CardTitle {
+    color: var(--fontColor);
+    font-size: 14px;
+    font-weight: bold;
+    text-align: start;
+
+}
+
+.CardDescription {
+    font-size: 10px;
+    color: #64748B;
+    text-align: start;
+
+}
+.avater {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    overflow: hidden;
+
+    .img {
+        max-width: 100%;
+        max-height: 100%;
+        width: auto;
+        height: auto;
+        object-fit: contain;
+    }
+}
+
+label {
+    text-align: start;
+}
+
+button {
+    width: 100%;
+}

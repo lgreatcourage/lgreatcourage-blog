@@ -1,0 +1,246 @@
+.cardRoot {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 0.5rem;
+    padding-top: 30px;
+}
+
+.blogItemWrapper {
+}
+
+.article {
+    background: #333333;
+    /* background: #ffffff; */
+    border-radius: 0.75rem;
+    overflow: hidden;
+    border: 1px solid rgba(243 244 246 / 0.5);
+    box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+    transition: transform 300ms ease-in-out, box-shadow 300ms ease-in-out;
+}
+
+:global(.dark) .article {
+    background: rgb(31 41 55);
+    border-color: rgb(55 65 81);
+}
+
+.article:hover {
+    box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+    transform: translateY(-0.5rem) scale(1.01);
+}
+
+:global(.dark) .article:hover {
+    box-shadow: 0 20px 25px -5px hsl(var(--primary) / 0.1), 0 8px 10px -6px hsl(var(--primary) / 0.1);
+}
+
+.coverLayout {
+    display: flex;
+    flex-direction: column;
+    /* background: rgba(243 244 246 / 0.5); */
+}
+
+@media (min-width: 768px) {
+    .coverLayout {
+        flex-direction: row;
+    }
+}
+
+.coverContainer {
+    position: relative;
+    height: 12rem;
+}
+
+@media (min-width: 768px) {
+    .coverContainer {
+        width: 33.333333%;
+        height: auto;
+    }
+}
+
+.coverImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 500ms;
+}
+
+.coverImage:hover {
+    transform: scale(1.05);
+}
+
+.contentWithCover {
+    padding: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+@media (min-width: 768px) {
+    .contentWithCover {
+        width: 66.666667%;
+    }
+}
+
+.contentNoCover {
+    padding: 1.25rem;
+}
+
+.metaRow {
+    display: flex;
+    align-items: center;
+    font-size: 0.75rem;
+    line-height: 1rem;
+    color: #FF7F00;
+    margin-bottom: 0.75rem;
+}
+
+:global(.dark) .metaRow {
+    color: rgb(156 163 175);
+}
+
+.metaItem {
+    display: flex;
+    align-items: center;
+}
+
+.metaItemFirst {
+    margin-right: 1rem;
+}
+
+.metaIcon {
+    width: 0.875rem;
+    height: 0.875rem;
+    color: #FF7F00;
+    margin-right: 0.25rem;
+}
+
+.title {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+    color: #FF7F00;
+    transition: color 200ms;
+}
+
+:global(.dark) .title {
+    color: #ffffff;
+}
+
+:global(.dark) .title:hover {
+    color: hsl(var(--primary) / 0.9);
+}
+
+.excerpt {
+    color: #ffffff;
+    margin-bottom: 1rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+:global(.dark) .excerpt {
+    color: rgb(209 213 219);
+}
+
+.tagsRow {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.tagsRowNoCover {
+    margin-bottom: 1rem;
+}
+
+.tagPill {
+    border-radius: 9999px;
+    border: 1px solid rgb(255 255 255);
+    background: #000000;
+    padding: 0.25rem 0.625rem;
+    font-size: 0.75rem;
+    line-height: 1rem;
+    color: #ffffff;
+}
+
+:global(.dark) .tagPill {
+    border-color: rgb(55 65 81);
+    background: rgb(55 65 81 / 0.4);
+    color: rgb(229 231 235);
+}
+
+.readMoreLink {
+    display: inline-flex;
+    align-items: center;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    color: #ffffff;
+    font-weight: 500;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+:global(.dark) .readMoreLink {
+    color: hsl(var(--primary) / 0.9);
+}
+
+.readMoreLink:hover {
+    text-decoration: underline;
+}
+
+.readMoreLinkWithCover {
+    margin-top: 0.5rem;
+    align-self: flex-start;
+}
+
+.readMoreIcon {
+    margin-left: 0.25rem;
+    width: 1rem;
+    height: 1rem;
+}
+
+.moreButtonWrapper {
+    margin-bottom: 0.25rem;
+}
+
+.tagStyle {
+    position: absolute;
+    width: 150px;
+    height: 35px;
+    top: 10px;
+    left: 0px;
+    z-index: 1;
+
+    &>div {
+        position: relative;
+        width: 100%;
+        height: 100%;
+
+        &>img {
+            width: 100%;
+            height: 100%;
+        }
+
+        &>span {
+            display: block;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            line-height: 35px;
+            font-size: 16px;
+            font-weight: bold;
+            color: #fff;
+            position: absolute;
+            top: 0;
+            left: 0;
+
+        }
+
+    }
+
+
+}

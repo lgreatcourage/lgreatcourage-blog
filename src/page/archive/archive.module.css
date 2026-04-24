@@ -1,0 +1,40 @@
+
+
+.archiveStyle {
+    width: 1280px;
+    background: #151515;
+    min-height: calc(100vh - 64px);
+    border-radius: 10px;
+    border: 1px solid #999999;
+    display: flex;
+    flex-direction: column;
+    padding: 24px;
+
+}
+
+.archiveTitle {
+    color: #ff7f00;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.archiveContent {
+    color: #ffffff;
+    padding-top: 24px;
+    padding-left: 50px;
+}
+
+.archiveContent :global(.ant-steps-item-title) { 
+    --ant-cmp-steps-item-title-color : #ffffff;
+    --ant-font-size: 16px;
+    font-weight: 600;
+}
+
+.archiveContent :global(.ant-timeline-item-content) { 
+    --ant-color-text : #ffffff;
+    font-weight: 600;
+}
+
+.archiveContent :global(.ant-timeline-item-rail) { 
+    --ant-timeline-tail-color : #ff7f00;
+}
