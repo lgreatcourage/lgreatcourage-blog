@@ -1,0 +1,125 @@
+
+
+.archiveStyle {
+    width: min(1280px, 100%);
+    max-width: 100%;
+    box-sizing: border-box;
+    min-height: calc(100vh - 64px);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 14px;
+    border: 1px solid rgba(255, 127, 0, 0.4);
+    background: rgba(15, 23, 42, 0.5);
+    box-shadow: 0 14px 36px rgba(2, 6, 23, 0.2);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
+.archiveHeader {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.archiveTitle {
+    color: #ff7f00;
+    font-size: 26px;
+    font-weight: 700;
+}
+
+.archiveSubTitle {
+    color: rgba(226, 232, 240, 0.86);
+    font-size: 14px;
+}
+
+.archiveMeta {
+    display: inline-flex;
+    width: fit-content;
+    margin-top: 4px;
+    padding: 2px 10px;
+    border-radius: 999px;
+    font-size: 12px;
+    color: #ffbd80;
+    background: rgba(255, 127, 0, 0.14);
+}
+
+.archivePanel {
+    margin-top: 16px;
+    padding: 18px 18px 6px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    background: linear-gradient(135deg, rgba(15, 23, 42, 0.45), rgba(30, 41, 59, 0.24));
+}
+
+.archiveTimeline {
+    padding-top: 4px;
+}
+
+.timelineItem {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.timelineTime {
+    width: fit-content;
+    padding: 2px 8px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 700;
+    color: #ffbd80;
+    background: rgba(255, 127, 0, 0.14);
+}
+
+.timelineContent {
+    color: rgba(248, 250, 252, 0.96);
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.loadingWrap {
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.emptyWrap {
+    padding: 18px 0 8px;
+}
+
+.emptyWrap :global(.ant-empty-description) {
+    color: rgba(226, 232, 240, 0.7);
+}
+
+.archiveTimeline :global(.ant-timeline-item-content) {
+    min-height: 40px;
+    padding-bottom: 14px;
+}
+
+.archiveTimeline :global(.ant-timeline-item-tail) {
+    border-inline-start-color: rgba(255, 127, 0, 0.55);
+}
+
+.archiveTimeline :global(.ant-timeline-item-head) {
+    border-color: #ff7f00;
+    background-color: rgba(255, 127, 0, 0.18);
+}
+
+@media (max-width: 1024px) {
+    .archiveStyle {
+        width: 100%;
+        min-height: auto;
+        padding: 14px;
+    }
+
+    .archiveTitle {
+        font-size: 22px;
+    }
+
+    .archivePanel {
+        padding: 14px 12px 2px;
+    }
+
+}

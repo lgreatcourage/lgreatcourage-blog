@@ -1,0 +1,167 @@
+.messageContainer {
+    width: min(1280px, 100%);
+    max-width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.pageHeader {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding: 6px 4px;
+}
+
+.pageTitle {
+    color: #ff7f00;
+    font-size: 26px;
+    font-weight: 700;
+}
+
+.pageSubTitle {
+    color: rgba(226, 232, 240, 0.82);
+    font-size: 14px;
+}
+
+.messageStage {
+    border-radius: 14px;
+    border: 1px solid rgba(255, 127, 0, 0.38);
+    background: rgba(15, 23, 42, 0.45);
+    box-shadow: 0 14px 30px rgba(2, 6, 23, 0.2);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    padding: 14px;
+}
+
+.messageShow {
+    width: 100%;
+    height: 460px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    padding: 10px;
+    background: linear-gradient(135deg, rgba(15, 23, 42, 0.42), rgba(30, 41, 59, 0.26));
+}
+
+.messageInter {
+    border-radius: 10px;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: var(--lane-gap, 10px);
+}
+
+.danmakuLane {
+    position: relative;
+    width: 100%;
+    flex: 1;
+    min-height: 0;
+    overflow: hidden;
+}
+
+.danmakuItem {
+    display: inline-flex;
+    align-items: center;
+    max-width: 560px;
+    padding: 8px 12px;
+    border-radius: 999px;
+    font-size: 14px;
+    line-height: 1;
+    font-weight: 600;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    box-shadow: 0 6px 14px rgba(2, 6, 23, 0.14);
+}
+
+.danmakuVariantA {
+    color: rgba(255, 255, 255, 0.92);
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.danmakuVariantB {
+    color: rgba(255, 255, 255, 0.95);
+    background: rgba(255, 127, 0, 0.18);
+    border: 1px solid rgba(255, 127, 0, 0.6);
+}
+
+.danmakuVariantC {
+    color: rgba(255, 255, 255, 0.92);
+    background: rgba(0, 0, 0, 0.24);
+    border: 1px solid rgba(255, 255, 255, 0.24);
+    backdrop-filter: blur(6px);
+}
+
+.danmakuVariantD {
+    color: rgba(0, 0, 0, 0.9);
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+.messageInputPanel {
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    background: rgba(15, 23, 42, 0.36);
+    padding: 12px 14px;
+}
+
+.inputHint {
+    font-size: 12px;
+    color: rgba(226, 232, 240, 0.72);
+}
+
+.messageInputContainer {
+    width: 100%;
+    height: 66px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.search :global(.ant-btn) { 
+    width: 100px;
+    --ant-btn-color-base: #ff7f00;
+    --ant-btn-color-hover: #ff9a2c;
+    --ant-btn-color-active: #e67200;
+    --ant-btn-default-bg: #ff7f00;
+    --ant-btn-default-color: #ffffff;
+    --ant-btn-default-border-color: #ff7f00;
+    font-weight: 700;
+}
+
+.search :global(.ant-input-affix-wrapper) { 
+    background: rgba(15, 23, 42, 0.35);
+    color: rgba(248, 250, 252, 0.95);
+    border-color: rgba(255, 255, 255, 0.2);
+    --ant-input-active-border-color: #ff7f00;
+    --ant-input-hover-border-color: #ff7f00;
+}
+
+@media (max-width: 1024px) {
+    .messageContainer {
+        width: 100%;
+    }
+
+    .pageTitle {
+        font-size: 22px;
+    }
+
+    .messageShow {
+        height: 380px;
+    }
+
+    .search :global(.ant-btn) {
+        width: 86px;
+    }
+}
+
+@media (max-width: 767px) {
+    .messageShow {
+        height: 320px;
+    }
+}

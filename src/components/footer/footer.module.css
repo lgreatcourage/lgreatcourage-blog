@@ -1,0 +1,217 @@
+.footer {
+    width: 100%;
+    border-top: 1px solid hsl(var(--border));
+    background: #151515;
+    min-height: 250px;
+    color: var(--fontColor);
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    padding: 2.25rem 2.25rem;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.75rem;
+}
+
+.brand {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.logoImg {
+    width: 15rem;
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.tagline {
+    font-size: 0.875rem;
+    line-height: 1.35;
+    color: rgba(255, 255, 255, 0.78);
+}
+
+.metaRow {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 1rem;
+    font-size: 0.75rem;
+    line-height: 1rem;
+    color: rgba(255, 255, 255, 0.55);
+}
+
+.badgeRow {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.badge {
+    display: inline-flex;
+    align-items: center;
+    height: 28px;
+    padding: 0 10px;
+    border-radius: 999px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    background: rgba(255, 255, 255, 0.06);
+    color: rgba(255, 255, 255, 0.82);
+    font-size: 12px;
+    letter-spacing: 0.2px;
+}
+
+.badgeAccent {
+    border-color: rgba(255, 127, 0, 0.55);
+    background: rgba(255, 127, 0, 0.12);
+    color: rgba(255, 255, 255, 0.92);
+}
+
+.columns {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.25rem;
+}
+
+.columnTitle {
+    font-size: 0.875rem;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 0.75rem;
+}
+
+.nav {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.navGrid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.5rem;
+}
+
+.textLine {
+    color: rgba(255, 255, 255, 0.68);
+    font-size: 0.875rem;
+    line-height: 1.5;
+}
+
+.navLink {
+    color: rgba(255, 255, 255, 0.76);
+    text-decoration: none;
+    transition: background 160ms ease, border-color 160ms ease, transform 160ms ease, color 160ms ease;
+    width: 100%;
+    min-height: 34px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.navLink:hover {
+    color: rgba(255, 255, 255, 0.95);
+    border-color: rgba(255, 127, 0, 0.5);
+    background: rgba(255, 127, 0, 0.12);
+    transform: translateY(-1px);
+}
+
+.navLink:focus-visible {
+    outline: 2px solid var(--fontActiveColor);
+    outline-offset: 2px;
+    border-radius: 6px;
+}
+
+.bottomBar {
+    margin-top: 0.25rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.copy {
+    font-size: 0.75rem;
+    line-height: 1rem;
+    color: rgba(255, 255, 255, 0.55);
+}
+
+.socialRow {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.socialLink {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    height: 36px;
+    padding: 0 12px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    background: rgba(255, 255, 255, 0.06);
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    transition: background 160ms ease, border-color 160ms ease, transform 160ms ease, color 160ms ease;
+}
+
+.socialLink:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.22);
+    color: rgba(255, 255, 255, 0.92);
+    transform: translateY(-1px);
+}
+
+.socialLink:focus-visible {
+    outline: 2px solid var(--fontActiveColor);
+    outline-offset: 2px;
+}
+
+.socialIcon {
+    width: 18px;
+    height: 18px;
+}
+
+@media (min-width: 900px) {
+    .content {
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 2.5rem;
+    }
+
+    .brand {
+        width: 420px;
+    }
+
+    .columns {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 2rem;
+    }
+
+    .bottomBar {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+
+@media (max-width: 900px) {
+    .container {
+        padding: 1.5rem 1rem;
+    }
+
+    .navGrid {
+        grid-template-columns: 1fr;
+    }
+}

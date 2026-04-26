@@ -1,0 +1,251 @@
+.headerStyle{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px 50px;
+    height: 60px;
+    color: #fff;
+    transition: all 0.3s ease;
+    /*border-bottom: 1px solid #ccc;*/
+}
+
+.headerBgColor{
+    background: rgba(0, 0, 0, 0.88);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.28);
+}
+
+.navigationStyle{
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+.logoStyle{
+    width: 150px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+}
+
+.logoLink{
+    display: flex;
+    align-items: center;
+    height: 40px;
+}
+
+.logoImg{
+    width: 150px;
+    height: 40px;
+    object-fit: contain;
+}
+
+.menuContentStyle{
+    display: flex;
+    align-items: center;
+    height: 60px;
+}
+
+.menuList{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.menuItem{
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 60px;
+}
+
+.menuItemActive{
+}
+
+.menuLink{
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 7px 12px;
+    border-radius: 8px;
+    color: var(--fontColor);
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 0.2px;
+    transition: background 160ms ease, color 160ms ease, box-shadow 160ms ease;
+}
+
+.menuLink:hover{
+    background: rgba(255, 255, 255, 0.14);
+    color: rgba(255, 255, 255, 1);
+}
+
+.menuLinkActive{
+    background: rgba(255, 255, 255, 0.22);
+    color: var(--fontActiveColor);
+    box-shadow: inset 0 -2px 0 rgba(255, 255, 255, 0.85);
+}
+
+.menuLinkWithArrow::after{
+    content: "▾";
+    font-size: 12px;
+    line-height: 1;
+    opacity: 0.9;
+}
+
+.dropdownMenu{
+    position: absolute;
+    left: 0;
+    top: calc(100% - 8px);
+    min-width: 180px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 8px;
+    border-radius: 10px;
+    background: rgba(15, 23, 42, 0.96);
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.32);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(8px);
+    pointer-events: none;
+    transition: opacity 160ms ease, transform 160ms ease, visibility 160ms ease;
+}
+
+.menuItem:hover .dropdownMenu{
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+.dropdownLink{
+    padding: 10px 10px;
+    border-radius: 8px;
+    color: rgba(248, 250, 252, 0.92);
+    text-decoration: none;
+    font-weight: 600;
+    transition: background 160ms ease, color 160ms ease;
+}
+
+.dropdownLink:hover{
+    background: rgba(255, 127, 0, 0.14);
+    color: #ffd1a6;
+}
+
+.dropdownLinkActive{
+    background: rgba(255, 127, 0, 0.2);
+    color: #ffbd80;
+}
+
+.toolsStyle{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.toolItem{
+    padding: 6px 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    color: rgba(255, 255, 255, 0.92);
+    transition: background 160ms ease, color 160ms ease;
+}
+
+.toolItem:hover{
+    background: rgba(255, 255, 255, 0.14);
+    color: rgba(255, 255, 255, 1);
+}
+
+.mobileMenuBtn {
+    display: none;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    background: transparent;
+    color: var(--fontColor);
+    border-radius: 8px;
+    padding: 6px 10px;
+    font-weight: 600;
+}
+
+@media (max-width: 767px) {
+    .headerStyle {
+        padding: 10px 16px;
+        height: 56px;
+    }
+
+    .navigationStyle {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .logoStyle {
+        width: 120px;
+    }
+
+    .logoImg {
+        width: 120px;
+    }
+
+    .mobileMenuBtn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .menuContentStyle {
+        position: absolute;
+        top: 56px;
+        left: 0;
+        width: 100%;
+        height: auto;
+        display: none;
+        padding: 10px 16px 14px;
+        background: var(--headerBg);
+        border-top: 1px solid rgba(255, 255, 255, 0.12);
+    }
+
+    .menuContentOpen {
+        display: block;
+    }
+
+    .menuList {
+        width: 100%;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 8px;
+    }
+
+    .menuItem {
+        height: auto;
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .menuLink {
+        width: 100%;
+        padding: 10px 12px;
+    }
+
+    .dropdownMenu {
+        position: static;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        pointer-events: auto;
+        margin-top: 4px;
+        box-shadow: none;
+        background: rgba(15, 23, 42, 0.82);
+    }
+
+    /* 移动端父级只做分组标题，避免触摸后直接跳转导致子菜单收起 */
+    .menuLinkWithArrow {
+        pointer-events: none;
+        opacity: 0.95;
+    }
+}
