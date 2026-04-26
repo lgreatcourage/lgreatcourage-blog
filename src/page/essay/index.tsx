@@ -64,7 +64,7 @@ const EssayListItem = ({
             >
               {photoList.map((path) => (
                 <Image
-                    src={path}
+                    src={import.meta.env.VITE_TENCENT_CLOUD_URL + '/essayImg/' + path}
                 />
                 // <img src={path} />
               ))}

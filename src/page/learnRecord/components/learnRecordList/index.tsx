@@ -14,6 +14,22 @@ type LearnRecordItem = {
     tags: string[]
 }
 
+const CLOUD_URL = (import.meta.env.VITE_TENCENT_CLOUD_URL ?? "").replace(/\/$/, "")
+
+function resolveCloudExpr(raw?: string) {
+    if (!raw) return ""
+    const text = String(raw).trim()
+    const matched = text.match(
+        /^VITE_TENCENT_CLOUD_URL\s*\+\s*['"]\/learnRecodeImg\/['"]\s*\+\s*['"]?([^'"]+)['"]?$/
+    )
+    if (!matched) return text
+    const filename = matched[1]
+    if (!filename) return text
+    return CLOUD_URL
+        ? `${CLOUD_URL}/learnRecodeImg/${filename}`
+        : `/learnRecodeImg/${filename}`
+}
+
 export const Index = () => {
     const navigate = useNavigate()
     const [searchValue] = useState<string>("");
@@ -58,7 +74,8 @@ export const Index = () => {
 
             <div className={styles.list}>
                 {pagedItems.map((item) => {
-                    const hasCover = Boolean(item.coverUrl)
+                    const coverUrl = resolveCloudExpr(item.coverUrl)
+                    const hasCover = Boolean(coverUrl)
                     return (
                         <button
                             key={item.id}
@@ -68,7 +85,7 @@ export const Index = () => {
                         >
                             {hasCover && (
                                 <div className={styles.coverWrap}>
-                                    <img className={styles.cover} src={item.coverUrl} alt={item.title} loading="lazy" />
+                                    <img className={styles.cover} src={coverUrl} alt={item.title} loading="lazy" />
                                 </div>
                             )}
 

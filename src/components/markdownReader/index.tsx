@@ -7,6 +7,29 @@ const markdownFiles = import.meta.glob("/src/data/md/**/*.md", {
   import: "default",
 }) as Record<string, () => Promise<string>>;
 
+const CLOUD_URL = (import.meta.env.VITE_TENCENT_CLOUD_URL ?? "").replace(/\/$/, "");
+
+function resolveCloudExpr(raw?: string) {
+  if (!raw) return "";
+  const source = String(raw).trim();
+  let text = source;
+  try {
+    text = decodeURIComponent(source);
+  } catch {
+    text = source;
+  }
+  text = text.replace(/^<|>$/g, "").trim();
+  const matched = text.match(
+    /^VITE_TENCENT_CLOUD_URL\s*\+\s*['"]\/learnRecodeImg\/['"]\s*\+\s*['"]?([^'"]+)['"]?$/
+  );
+  if (!matched) return source;
+  const filename = matched[1];
+  if (!filename) return source;
+  return CLOUD_URL
+    ? `${CLOUD_URL}/learnRecodeImg/${filename}`
+    : `/learnRecodeImg/${filename}`;
+}
+
 function stripFrontmatter(raw: string) {
   const text = raw.replace(/^\uFEFF/, "")
   const lines = text.split(/\r?\n/)
@@ -58,9 +81,10 @@ const MarkdownPage = ({ mdPath }: { mdPath: string }) => {
       <ReactMarkdown
         remarkPlugins={[remarkGfm]}
         components={{
-          img: ({ ...props }) => (
+          img: ({ src, ...props }) => (
             <img
               {...props}
+              src={resolveCloudExpr(src)}
               loading="lazy"
               referrerPolicy="no-referrer"
               style={{ maxWidth: "100%", height: "auto", display: "block" }}

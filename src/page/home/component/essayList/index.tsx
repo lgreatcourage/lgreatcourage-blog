@@ -48,7 +48,7 @@ export function EssayList() {
                 }
               >
                 {post.photoList.map((path) => (
-                  <Image src={path} />
+                  <Image src={import.meta.env.VITE_TENCENT_CLOUD_URL + '/essayImg/' + path} />
                 ))}
               </div>
             </div>
