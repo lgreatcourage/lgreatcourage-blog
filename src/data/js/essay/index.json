@@ -7,5 +7,14 @@
             "33da5a701b395fc6581436fa3aff008d.jpg",
             "image.png"
         ]
+    },
+    {
+        "id": 2,
+        "date": "2026-04-2",
+        "content": "这两天在力扣刷题，看到了一些很好玩的评论hhhh\n而且还学到了面向结果编程的思想，学到了(๑•̀ㅂ•́)و✧",
+        "photoList": [
+            "essay2_1.png",
+            "essay2_2.png"
+        ]
     }
 ]
