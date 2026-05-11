@@ -10,11 +10,19 @@
     },
     {
         "id": 2,
-        "date": "2026-04-2",
+        "date": "2026-04-02",
         "content": "这两天在力扣刷题，看到了一些很好玩的评论hhhh\n而且还学到了面向结果编程的思想，学到了(๑•̀ㅂ•́)و✧",
         "photoList": [
             "essay2_1.png",
             "essay2_2.png"
+        ]
+    },
+    {
+        "id": 3,
+        "date": "2026-05-11",
+        "content": "第一次接触Qt,发现这个Qt creator里面有一个设计器，是真的难用啊，不想用electron包装就要吃这个苦吗...\n期待一下我的小工具GreatReader吧！",
+        "photoList": [
+            "essay3.png"
         ]
     }
 ]
